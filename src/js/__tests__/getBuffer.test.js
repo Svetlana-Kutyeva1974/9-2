@@ -6,7 +6,6 @@ test('test добавление персонажа в команду', () => {
   expect(() => {
     const data = '{"data":{"user":{"id":1,"name":"Hitman","level":10}}}';
     const buffer = new ArrayBuffer(data.length * 2);
-    getBuffer();
     expect(getBuffer()).toBe(buffer);
   }).toBeTruthy();
 });

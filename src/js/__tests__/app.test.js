@@ -1,7 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import getBuffer from '../getBuffer.js';
+// eslint-disable-next-line no-unused-vars
 import ArrayBufferConverter from '../ArrayBufferConverter.js';
-
+/*
 test('test error toThrow', () => {
   expect(() => {
     // eslint-disable-next-line no-unused-vars
@@ -18,7 +19,7 @@ test('test error toThrow', () => {
   const buffer = new ArrayBuffer(data.length * 2);
   expect(p1.load()).toBe(buffer);
 });
-/*
+
 test('test успешное добавление', () => {
   const p = new Character('hero', 'Magician');
   const p0 = new Character('hero1', 'Bowman');
