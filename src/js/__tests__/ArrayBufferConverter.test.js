@@ -3,7 +3,7 @@ import ArrayBufferConverter from '../ArrayBufferConverter.js';
 
 test('string length name error', () => {
   const result2 = new ArrayBufferConverter();
-  expect(result2.name).toMatch(/hero/);
+  expect(result2.toString()).toMatch(/{"data":{"user":{"id":1,"name":"Hitman","level":10}}}/);
 });
 /*
 test('app string length name error', () => {

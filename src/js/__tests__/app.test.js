@@ -6,7 +6,17 @@ test('test error toThrow', () => {
   expect(() => {
     // eslint-disable-next-line no-unused-vars
     const p1 = new ArrayBufferConverter();
-  }).toThrow(/Персонаж уже входит в команду/);
+    p1.load();
+    p1.toString();
+  }).toBeTruthy();
+});
+
+test('test error toThrow', () => {
+  // eslint-disable-next-line no-unused-vars
+  const p1 = new ArrayBufferConverter();
+  const data = '{"data":{"user":{"id":1,"name":"Hitman","level":10}}}';
+  const buffer = new ArrayBuffer(data.length * 2);
+  expect(p1.load()).toBe(buffer);
 });
 /*
 test('test успешное добавление', () => {
@@ -16,15 +26,6 @@ test('test успешное добавление', () => {
   t.add(p);
   t.add(p0);
   expect(t).toMatchObject(new Team([p, p0]).members);
-});
-
-test('test преобразование в массив', () => {
-  const p1 = new Character('hero', 'Magician');
-  const p2 = new Character('hero1', 'Bowman');
-  const team = new Team();
-  team.add(p1);
-  team.add(p2);
-  expect(team.toArray()).toStrictEqual([...team.members]);
 });
 
 test('test успешное добавление', () => {

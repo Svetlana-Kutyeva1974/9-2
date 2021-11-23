@@ -1,20 +1,16 @@
-// eslint-disable-next-line no-unused-vars
 import getBuffer from '../getBuffer.js';
+// eslint-disable-next-line no-unused-vars
 import ArrayBufferConverter from '../ArrayBufferConverter.js';
 
-test('test error toThrow', () => {
-  expect(() => {
-    // eslint-disable-next-line no-unused-vars
-    const p1 = new ArrayBufferConverter();
-  }).toThrow(/Персонаж уже входит в команду/);
-});
-/*
 test('test добавление персонажа в команду', () => {
   expect(() => {
-    expect(obj2.members.size).toBe(2);
+    const data = '{"data":{"user":{"id":1,"name":"Hitman","level":10}}}';
+    const buffer = new ArrayBuffer(data.length * 2);
+    getBuffer();
+    expect(getBuffer()).toBe(buffer);
   }).toBeTruthy();
 });
-
+/*
 test('test успешное добавление', () => {
   const p = new Character('hero', 'Magician');
   const p0 = new Character('hero1', 'Bowman');
