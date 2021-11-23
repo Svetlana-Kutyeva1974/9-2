@@ -14,7 +14,9 @@ test('возврат buffer', () => {
     const buffer = new ArrayBuffer(data.length * 2);
     */
     const result2 = new ArrayBufferConverter();
-    expect(result2.load()).toBe(getBuffer);
+    const buf = getBuffer();
+    const func = ArrayBufferConverter.load.call(result2)();
+    expect(func()).toBe(buf);
   }).toBeTruthy();
 });
 /*

@@ -6,7 +6,8 @@ test('test возврат buffer из getbuffer', () => {
   expect(() => {
     const data = '{"data":{"user":{"id":1,"name":"Hitman","level":10}}}';
     const buffer = new ArrayBuffer(data.length * 2);
-    expect(getBuffer()).toBe(buffer);
+    const getbuf = getBuffer();
+    expect(getbuf).toBe(buffer);
   }).toBeTruthy();
 });
 /*
