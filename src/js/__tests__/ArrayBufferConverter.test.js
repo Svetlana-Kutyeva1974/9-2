@@ -1,9 +1,21 @@
 // eslint-disable-next-line no-unused-vars
 import ArrayBufferConverter from '../ArrayBufferConverter.js';
+import getBuffer from '../getBuffer.js';
 
-test('string length name error', () => {
+test('возврат строки', () => {
   const result2 = new ArrayBufferConverter();
   expect(result2.toString()).toMatch(/{"data":{"user":{"id":1,"name":"Hitman","level":10}}}/);
+});
+
+test('возврат buffer', () => {
+  expect(() => {
+    /*
+    const data = '{"data":{"user":{"id":1,"name":"Hitman","level":10}}}';
+    const buffer = new ArrayBuffer(data.length * 2);
+    */
+    const result2 = new ArrayBufferConverter();
+    expect(result2.load()).toBe(getBuffer);
+  }).toBeTruthy();
 });
 /*
 test('app string length name error', () => {
