@@ -1,8 +1,8 @@
 import getBuffer from './getBuffer.js';
 
 export default class ArrayBufferConverter {
-  static load() {
-    return getBuffer();
+  load() {
+    return getBuffer.call(this);
   }
 
   // eslint-disable-next-line no-unused-vars
