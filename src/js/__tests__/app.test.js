@@ -1,13 +1,18 @@
-// eslint-disable-next-line no-unused-vars
-import getBuffer from '../getBuffer.js';
-// eslint-disable-next-line no-unused-vars
 import ArrayBufferConverter from '../ArrayBufferConverter.js';
+import getBuffer from '../getBuffer.js';
 
+test('возврат строки', () => {
+  const result2 = new ArrayBufferConverter();
+  expect(result2.toString()).toMatch(/{"data":{"user":{"id":1,"name":"Hitman","level":10}}}/);
+});
+
+test('возврат buffer', () => {
+  const result2 = new ArrayBufferConverter();
+  const buf = getBuffer();
+  expect(result2.load()).toEqual(buf);
+});
 test('test функции работают', () => {
-  expect(() => {
-    // eslint-disable-next-line no-unused-vars
-    const p1 = new ArrayBufferConverter();
-    p1.load();
-    p1.toString();
-  }).toBeTruthy();
+  const p1 = new ArrayBufferConverter();
+  p1.load();
+  p1.toString();
 });
